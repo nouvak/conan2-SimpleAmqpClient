@@ -11,8 +11,8 @@ class SimpleAmqpClientConan(ConanFile):
     description = "SimpleAmqpClient is an easy-to-use C++ wrapper around the rabbitmq-c C library"
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False], "fPIC": [True, False]}
-    default_options = {"shared": True, "fPIC": True}
-    requires = ["rabbitmq-c/0.9.0", "boost/[>=1.66.0]"]
+    default_options = {"shared": False, "fPIC": False}
+    requires = ["rabbitmq-c/0.15.0", "boost/[>=1.66.0]"]
     exports_sources = "CMakeLists.txt", "Modules/*"
 
     @property
